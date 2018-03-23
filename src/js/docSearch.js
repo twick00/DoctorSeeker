@@ -21,20 +21,21 @@ export function getPhone(data) {
 
 }
 export function getSite(data) {
-
+  
 }
 export function getBoolNewPatients(data) {
-  let acceptingPatientsObj = [];
+  let acceptingPatientsArr = [];
   for(let i = 0; i < data.data.practices.length; i++)
   {
     if (data.data.practices[i].accepts_new_patients === true) 
     {
-      acceptingPatientsObj[i] = {name:data.data.practices.name, accepting:true};
+      acceptingPatientsArr[i] = {name:data.data.practices.name, accepting:true};
     }
     else {
-      acceptingPatientsObj[i] = {name:data.data.practices.name, accepting:false};
+      acceptingPatientsArr[i] = {name:data.data.practices.name, accepting:false};
     }
   }
+  return acceptingPatientsArr;
 }
 
 //https://api.betterdoctor.com/2016-03-01/doctors?query=${symptom}&location=${location}&limit=${pageLimit}&user_key=${api}
