@@ -4,10 +4,10 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 
-const projectName = "Project-Name";
+const projectName = "Doctor Seeker";
 
 module.exports = {
-  entry: './src/main.js',
+  entry: './src/js/main.js',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')

@@ -4,6 +4,44 @@
     <title>Project Name</title>
   </head>
   <body>
-    
+    <div class="container">
+        <form action="post">
+          <div class="col">
+          <label for="searchName">Enter a Doctor's name or leave blank:</label>
+          <br>
+          <input id="searchName" type="text" placeholder="Search Name">
+        </div>
+          <div class="col">
+          <label for="searchSymptom">Enter a symptom or leave blank:</label>
+            <br>
+          <input id="searchSymptom" type="text" placeholder="Search Symptom">
+        </div>
+        <div class="col">
+          <label for="page-limit">Results:</label>
+          <br>
+          <select id="page-limit">
+            <option  value="1">1</option>
+            <option  value="5">5</option>
+            <option  value="10">10</option>
+            <option  value="20">20</option>
+          </select>
+        </div>
+        <div class="col">
+          <label for="location">Selecta a location:</label>
+          <br>
+          <select id="location">
+            <option value="wa-seattle">Seattle, Wa</option>
+            <option value="or-portland">Portland, Or</option>
+          </select>
+        </div>
+        <div class="col">
+          <hr>
+        <button type="submit">Submit</button>
+        </div>
+        </form>
+    </div>
+    <div id="results" class="container">
+
+    </div>
   </body>
 </html>
